@@ -1,0 +1,25 @@
+{
+  // Use your project's virtualenv Python
+  "python.defaultInterpreterPath": "${workspaceFolder}/.venv/bin/python",
+
+  // Enable IntelliSense & auto-imports
+  "python.analysis.autoImportCompletions": true,
+  "python.analysis.completeFunctionParens": true,
+  "python.analysis.typeCheckingMode": "basic",
+
+  // Format & organize imports on save
+  "editor.formatOnSave": true,
+  "editor.codeActionsOnSave": {
+    "source.organizeImports": "explicit",
+    "source.fixAll": "explicit"
+  },
+
+  // Use Black for formatting & isort for imports
+  "python.formatting.provider": "black",
+  "isort.check": true,
+
+  // Improve Django stubs handling
+  "python.analysis.extraPaths": [
+    "${workspaceFolder}"
+  ]
+}
