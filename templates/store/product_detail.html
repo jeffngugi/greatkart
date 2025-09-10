@@ -10,7 +10,7 @@
 		<aside class="col-md-6">
 <article class="gallery-wrap">
 	<div class="img-big-wrap">
-	   <a href="#"><img src="{% static './images/items/12.jpg'%}"></a>
+	   <a href="#"><img src="{{single_product.images.url}}"></a>
 	</div> <!-- img-big-wrap.// -->
 
 </article> <!-- gallery-wrap .end// -->
@@ -67,7 +67,11 @@
 		</div>
 	</div> <!-- row.// -->
 	<hr>
+	{% if single_product.stock <= 0 %}
+	<h5 class="text-danger">Out of stock</h5>
+	{% else %}
 	<a href="./product-detail.html" class="btn  btn-primary"> <span class="text">Add to cart</span> <i class="fas fa-shopping-cart"></i>  </a>
+	{% endif %}
 </article> <!-- product-info-aside .// -->
 		</main> <!-- col.// -->
 	</div> <!-- row.// -->
